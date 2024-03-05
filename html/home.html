@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Home</title>
+</head>
+
+<body class="background-main">
+    <!-- Popup -->
+    <div class="popup" id="logoutPopup">
+        <div class="popup-content">
+            <p>Are you want to logout?</p>
+            <div class=" d-flex gap-3 justify-content-center">
+                <button id="confirmLogout" class="btn bg-primary px-3 text-light">Yes</button>
+                <button id="cancelLogout" class="btn bg-danger px-3 text-light">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- nav -->
+    <section class="row ">
+        <nav class=" container-fluid d-flex justify-content-center align-items-center"
+            style="height: 106px; position: fixed; top: 0; right: 0; background-color: #2B2828; justify-content: space-between!important; z-index: 99;">
+            <a href="./home.html"><img src="../images/logo_nav.png" alt="logo" class=" img-logo"></a>
+            <div class="info-name text-light fs-5">
+                <label> Hello,  nice to see you</label>
+            </div>
+        </nav>
+    </section>
+    <section class="row nav-moblie">
+        <nav class=" container-fluid d-flex justify-content-center align-items-center"
+            style="height: 106px; position: fixed; top: 0; right: 0; background-color: #2B2828; justify-content: space-between!important; z-index: 99;">
+            <label for="nav__check" class="nav__bar-btn">
+                <img src="../images/icon-menu-mobie.png" alt="" class="menu-icon-md">
+            </label>
+            <input type="checkbox" id="nav__check">
+            <label for="nav__check" class="overlay-display"></label>
+            <!-- Nav Mobile -->
+            <nav class="nav__mobile">
+                <div for="nav__check" class="nav__mobile-close">
+                    <label for="nav__check">X</label>
+                </div>
+                <ul class="nav__mobile-list menu-nav ">
+                    <li>
+
+                        <a href="./home.html" class="nav__mobile-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path d="M2.5 27.5H27.5" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3.68652 27.5003L3.74903 12.4627C3.74903 11.7002 4.11152 10.9753 4.71152 10.5003L13.4615 3.68778C14.3615 2.98778 15.624 2.98778 16.5365 3.68778L25.2865 10.4878C25.899 10.9628 26.249 11.6877 26.249 12.4627V27.5003"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+                                <path
+                                    d="M19.375 13.75H10.625C9.5875 13.75 8.75 14.5875 8.75 15.625V27.5H21.25V15.625C21.25 14.5875 20.4125 13.75 19.375 13.75Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.5 20.3125V22.1875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 9.375H16.875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./playlist.html" class="nav__mobile-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M11.25 27.5H18.75C25 27.5 27.5 25 27.5 18.75V11.25C27.5 5 25 2.5 18.75 2.5H11.25C5 2.5 2.5 5 2.5 11.25V18.75C2.5 25 5 27.5 11.25 27.5Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M19.375 12.1875C20.4105 12.1875 21.25 11.348 21.25 10.3125C21.25 9.27697 20.4105 8.4375 19.375 8.4375C18.3395 8.4375 17.5 9.27697 17.5 10.3125C17.5 11.348 18.3395 12.1875 19.375 12.1875Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.625 12.1875C11.6605 12.1875 12.5 11.348 12.5 10.3125C12.5 9.27697 11.6605 8.4375 10.625 8.4375C9.58947 8.4375 8.75 9.27697 8.75 10.3125C8.75 11.348 9.58947 12.1875 10.625 12.1875Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.5 16.625H19.5C20.125 16.625 20.625 17.125 20.625 17.75C20.625 20.8625 18.1125 23.375 15 23.375C11.8875 23.375 9.375 20.8625 9.375 17.75C9.375 17.125 9.875 16.625 10.5 16.625Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Playlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./album.html" class="nav__mobile-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path d="M2.5 27.5H27.5" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3.68652 27.5003L3.74903 12.4627C3.74903 11.7002 4.11152 10.9753 4.71152 10.5003L13.4615 3.68778C14.3615 2.98778 15.624 2.98778 16.5365 3.68778L25.2865 10.4878C25.899 10.9628 26.249 11.6877 26.249 12.4627V27.5003"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+                                <path
+                                    d="M19.375 13.75H10.625C9.5875 13.75 8.75 14.5875 8.75 15.625V27.5H21.25V15.625C21.25 14.5875 20.4125 13.75 19.375 13.75Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.5 20.3125V22.1875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 9.375H16.875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Album</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./index.html" class="nav__mobile-link isLogout" id="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M17.0454 20.4825C17.5535 20.1901 17.8602 19.6267 17.8871 19.0711L18.2735 11.1024C18.3147 10.2512 17.6958 9.3125 16.6506 9.3125H13.3494C12.3041 9.3125 11.6853 10.2513 11.7265 11.1024C11.7265 11.1024 11.7265 11.1024 11.7265 11.1024L12.1129 19.0711C12.1129 19.0711 12.1129 19.0711 12.1129 19.0711L17.0454 20.4825ZM17.0454 20.4825C17.8845 21.1765 18.3958 22.2783 18.3958 23.4375C18.3958 25.3644 16.9829 27.1328 15 27.1328C13.0171 27.1328 11.6042 25.3644 11.6042 23.4375C11.6042 22.2783 12.1155 21.1765 12.9546 20.4825H17.0454ZM28.7725 26.2382L28.7725 26.2383C29.0954 26.8679 29.0561 27.5817 28.7708 28.1369C28.486 28.691 28.0121 29 27.4969 29H2.50283C1.98618 29 1.5129 28.6906 1.22868 28.1363C0.94364 27.5805 0.905127 26.8663 1.22718 26.2383L1.22723 26.2382L13.7244 1.86169C13.7244 1.86166 13.7244 1.86162 13.7244 1.86158C14.0403 1.24567 14.5464 0.999771 15.0002 1C15.4543 1.00023 15.9605 1.24714 16.2757 1.8617L28.7725 26.2382Z"
+                                    stroke="white" stroke-width="2" />
+                            </svg>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="./home.html"><img src="../images/JHOOM.png" alt="" class="menu-logo-md"></a>
+            <div class="info-name text-light fs-5">
+                <label> Hello,  nice to see you</label>
+            </div>
+        </nav>
+    </section>
+    <!-- silde bar -->
+    <div class="container-fluid  ">
+        <section class="row ">
+            <div class="col-lg-2 col-md-0 silde-bar text-light"
+                style="background-color: #2B2828; position: fixed; top:106px; left: 0; bottom: 0;">
+                <ul class="menu-nav mt-5">
+                    <li>
+                        <a href="./home.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path d="M2.5 27.5H27.5" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3.68652 27.5003L3.74903 12.4627C3.74903 11.7002 4.11152 10.9753 4.71152 10.5003L13.4615 3.68778C14.3615 2.98778 15.624 2.98778 16.5365 3.68778L25.2865 10.4878C25.899 10.9628 26.249 11.6877 26.249 12.4627V27.5003"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+                                <path
+                                    d="M19.375 13.75H10.625C9.5875 13.75 8.75 14.5875 8.75 15.625V27.5H21.25V15.625C21.25 14.5875 20.4125 13.75 19.375 13.75Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.5 20.3125V22.1875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 9.375H16.875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Home</span>
+                        </a>
+
+                    </li>
+                    <li class="text-light">
+                        <a href="./playlist.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M11.25 27.5H18.75C25 27.5 27.5 25 27.5 18.75V11.25C27.5 5 25 2.5 18.75 2.5H11.25C5 2.5 2.5 5 2.5 11.25V18.75C2.5 25 5 27.5 11.25 27.5Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M19.375 12.1875C20.4105 12.1875 21.25 11.348 21.25 10.3125C21.25 9.27697 20.4105 8.4375 19.375 8.4375C18.3395 8.4375 17.5 9.27697 17.5 10.3125C17.5 11.348 18.3395 12.1875 19.375 12.1875Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.625 12.1875C11.6605 12.1875 12.5 11.348 12.5 10.3125C12.5 9.27697 11.6605 8.4375 10.625 8.4375C9.58947 8.4375 8.75 9.27697 8.75 10.3125C8.75 11.348 9.58947 12.1875 10.625 12.1875Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.5 16.625H19.5C20.125 16.625 20.625 17.125 20.625 17.75C20.625 20.8625 18.1125 23.375 15 23.375C11.8875 23.375 9.375 20.8625 9.375 17.75C9.375 17.125 9.875 16.625 10.5 16.625Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Playlist</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="./album.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path d="M2.5 27.5H27.5" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3.68652 27.5003L3.74903 12.4627C3.74903 11.7002 4.11152 10.9753 4.71152 10.5003L13.4615 3.68778C14.3615 2.98778 15.624 2.98778 16.5365 3.68778L25.2865 10.4878C25.899 10.9628 26.249 11.6877 26.249 12.4627V27.5003"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round" />
+                                <path
+                                    d="M19.375 13.75H10.625C9.5875 13.75 8.75 14.5875 8.75 15.625V27.5H21.25V15.625C21.25 14.5875 20.4125 13.75 19.375 13.75Z"
+                                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.5 20.3125V22.1875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13.125 9.375H16.875" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Album</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="./index.html" class="isLogout">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M17.0454 20.4825C17.5535 20.1901 17.8602 19.6267 17.8871 19.0711L18.2735 11.1024C18.3147 10.2512 17.6958 9.3125 16.6506 9.3125H13.3494C12.3041 9.3125 11.6853 10.2513 11.7265 11.1024C11.7265 11.1024 11.7265 11.1024 11.7265 11.1024L12.1129 19.0711C12.1129 19.0711 12.1129 19.0711 12.1129 19.0711L17.0454 20.4825ZM17.0454 20.4825C17.8845 21.1765 18.3958 22.2783 18.3958 23.4375C18.3958 25.3644 16.9829 27.1328 15 27.1328C13.0171 27.1328 11.6042 25.3644 11.6042 23.4375C11.6042 22.2783 12.1155 21.1765 12.9546 20.4825H17.0454ZM28.7725 26.2382L28.7725 26.2383C29.0954 26.8679 29.0561 27.5817 28.7708 28.1369C28.486 28.691 28.0121 29 27.4969 29H2.50283C1.98618 29 1.5129 28.6906 1.22868 28.1363C0.94364 27.5805 0.905127 26.8663 1.22718 26.2383L1.22723 26.2382L13.7244 1.86169C13.7244 1.86166 13.7244 1.86162 13.7244 1.86158C14.0403 1.24567 14.5464 0.999771 15.0002 1C15.4543 1.00023 15.9605 1.24714 16.2757 1.8617L28.7725 26.2382Z"
+                                    stroke="white" stroke-width="2" />
+                            </svg>
+                            <span>Logout</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Container-main -->
+        <section class="container-fluid" style="margin-bottom: 100px;">
+            <div class="row">
+                <!-- Carousel -->
+                <div class="col-lg-2 col-md-0 col-sm-0 col-0 remove-element"></div>
+                <div class="col-lg-10 col-md-12 col-sm-12 col-12 width-carousel-md" style="margin-top: 106px;">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../images/banner4.jpg" class=" w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../images/banner3.jpg" class=" w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <nav class="navbar  col-12 col-lg-5 col-md-6 col-sm-6 ">
+                        <div class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: rgba(255, 255, 255, 0) ; border: none;"><i
+                                        class="fa fa-search text-light"></i></span>
+                                <input type="text" class="form-control form-search " placeholder="Search">
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="row">
+                        <div class=" col-lg-8 col-md-12 col-sm-0 col-12">
+                            <h2 style="color: #3EDC24;">TOP ALBUM</h2>
+                            <div class="row album ">
+                            </div>
+
+                            <h2 style="color: #3EDC24;">TOP ARTISTS</h2>
+                            <div class="row artirst">
+                            </div>
+                        </div>
+                        <div class=" col-lg-4 col-md-0 col-sm-0 col-0 mt-5">
+                            <div class="top-song p-3 ">
+                                <h2
+                                    style=" color: #3EDC24; display: block; width: fit-content; height: max-content; border-bottom:1px solid #3EDC24; padding: 3px;">
+                                    Top Songs</h2>
+
+                                <ul class="list-top-songs" id="top-songs-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="play-music  d-none row p-0 m-0">
+        <div class="col-3 author-infor d-flex justify-content-around align-items-center">
+            <div class="me-2">
+
+                <img class="image-song  " src="../images/lockaway.png" alt="">
+            </div>
+            <div class="text-white">
+                <div class="fs-2  name-song">Vision</div>
+                <div class="fs-5  author-song">Bella</div>
+
+            </div>
+        </div>
+        <div class="col-xl-6 col-sm-9   text-white d-flex   align-items-center">
+            <div style="width: 100%;">
+                <div class="col-12  d-flex justify-content-center align-items-center ">
+
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="pointer seek_slider ms-5 me-5">
+                    <div class="total-duration">00:00</div>
+                </div>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+
+                    <div class="random-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="prev-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-step-backward fa-xl" title="back"></i>
+                    </div>
+                    <div class="playpause-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-play-circle fa-2x play-song"></i>
+                        <i class="fa fa-pause-circle fa-2x d-none pause-song"></i>
+                    </div>
+                    <div class="next-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-step-forward fa-xl"></i>
+                    </div>
+                    <div class="repeat-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-repeat fa-xl" title="repeat"></i>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="volume col-3 d-flex justify-content-center align-items-center">
+
+            <i class="fa fa-volume-down text-white fs-3 "></i>
+            <input type="range" min="1" max="100" value="99" class="pointer volume_slider me-2 ms-2"
+                onchange="setVolume()">
+            <i class="fa fa-volume-up text-white fs-3"></i>
+        </div>
+    </section>
+
+
+</body>
+<script type="module" src="../js/action.js"></script>
+<script>
+
+</script>
+
+</html>
